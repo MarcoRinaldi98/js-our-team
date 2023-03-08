@@ -44,8 +44,16 @@ for (let i = 0; i < dipendenti.length; i++) {
 
     for (let key in dipendenteCorrente) {
         console.log(key + ': ' + dipendenteCorrente[key]);
-        containerDom.innerHTML += `${key}: ${dipendenteCorrente[key]} <br />`;
+        
     }
+    containerDom.innerHTML += `
+        <div class="card m-3" style="width: 18rem;">
+            <img src="img/${dipendenteCorrente['foto']}" class="card-img-top" alt="immagine di ${dipendenteCorrente['nome']}">
+            <div class="card-body text-center">
+                <h5 class="card-title">${dipendenteCorrente['nome']}</h5>
+                <p class="card-text">${dipendenteCorrente['ruolo']}</p>
+            </div>
+        </div>`;
 }
 
 
