@@ -1,7 +1,9 @@
 /* 
 JAVASCRIPT
 */
+
 const containerDom = document.getElementById('container');
+//array di ogetti
 const dipendenti = [
     {
         'nome': 'Wayne Barnett',
@@ -36,11 +38,13 @@ const dipendenti = [
 ];
 console.log(dipendenti);
 
+//ciclo per stampare nell'html le informazioni dei dipendenti
 for (let i = 0; i < dipendenti.length; i++) {
     const dipendenteCorrente = dipendenti[i];
 
     for (let key in dipendenteCorrente) {
         console.log(key + ': ' + dipendenteCorrente[key]);
+        containerDom.innerHTML += `${key}: ${dipendenteCorrente[key]} <br />`;
     }
 }
 
