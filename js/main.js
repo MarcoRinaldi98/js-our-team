@@ -34,3 +34,7 @@ const dipendenti = [
         'foto': 'barbara-ramos-graphic-designer.jpg'
     }
 ];
+console.log(dipendenti);
+for (let key in dipendenti) {
+    console.log(dipendenti[key]);
+}
