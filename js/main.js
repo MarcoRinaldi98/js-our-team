@@ -1,7 +1,7 @@
 /* 
 JAVASCRIPT
 */
-
+const containerDom = document.getElementById('container');
 const dipendenti = [
     {
         'nome': 'Wayne Barnett',
@@ -35,6 +35,15 @@ const dipendenti = [
     }
 ];
 console.log(dipendenti);
-for (let key in dipendenti) {
-    console.log(dipendenti[key]);
+
+for (let i = 0; i < dipendenti.length; i++) {
+    const dipendenteCorrente = dipendenti[i];
+
+    for (let key in dipendenteCorrente) {
+        console.log(key + ': ' + dipendenteCorrente[key]);
+    }
 }
+
+
+
+
